@@ -1,0 +1,55 @@
+************Classes**************
+
+To simplify the file structure of the project, small related classes are placed in the same 
+source java file, for example the classes for the arithmetic operators: Arith_Plus, Arith_Minus,
+ ... etc. all in ArithOp.java
+
+-TreeNode
+	-FunOp
+		FunOp_Id
+		FunOp_pair
+		FunOp_first
+		FunOp_second 
+		
+		-ArithOp (Arithemtic Operators)
+			Arith_Plus 
+			Arith_Minus 
+			Arith_Mul 
+			Arith_Div 
+			
+		-BoolOp (Boolean Operators)
+			Bool_And
+			Bool_Or
+			Bool_Not
+			
+		-CompOp (Comparison Operators)
+			Comp_Eq
+			Comp_Gt
+			Comp_Ge
+			Comp_Lt
+			Comp_Le
+			
+	
+	-Exp
+		Exp_Id
+		Exp_Int
+		Exp_Float
+		Exp_If
+		Exp_Nil
+		
+		-Fun_Exp
+		
+	-ExpList	
+		
+	-FunDef
+	
+	-FunDefList
+	
+	-FunHeader
+	
+-IO
+	-LexArithArray
+		LexArithArray State
+		Parser
+	
+-ParameterList

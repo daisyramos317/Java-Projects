@@ -1,0 +1,20 @@
+************Instructions**************
+
+-The input test files should be placed directly in the src project folder.
+
+-A blank output textfile must be saved in the src project folder as well since the output file 
+will appear here displaying a list of tokens from the input file source code.
+
+-They may be saved in any format since they will be passed as arguments but order matters since the
+input file argument is hardcoded first. Adjust the arguments below respectively, input then output. 
+
+-Go to the Run tab-> Scroll to Run Configurations-> Parser-> Arguments-> Program Arguments
+type in input textfile followed by output textfile with a single space in between, no commas are necessary.
+The program runs for all inputN.txt that it finds and compares every time the output with outputN.txt,
+so multiple inputs and outputs may be saved respectively, e.g. input1.txt output1.txt
+
+-The program directory should also be correct to avoid file not found exceptions, 
+I ran it manually through Run Configurations->Arguments->Working Directory->Default or Other
+
+
+

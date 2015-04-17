@@ -1,0 +1,40 @@
+def square x = (* x x)
+
+def pi = 3.14159
+
+def cylinder_volume length radius =
+    (* length (* (pi) (square radius)))
+    
+def fact n =
+    if (= n 0) then 1
+    else (* n (fact (- n 1)))
+    
+def test x y =
+    if (> x -0987) then +6453
+    else -1540
+
+def length list =
+    if (= list nil) then 0
+    else (+ 1 (length (second list)))
+
+def build_list i =
+    if (= i 0) then nil
+    else (pair i (build_list (- i 1)))
+
+def map f list =
+    if (= list nil) then nil
+    else (pair (f (first list)) (map f (second list)))
+
+def filter f list =
+    if (= list nil) then nil
+    else if (f (first list)) then (pair (first list) (filter f (second list)))
+    else (filter f (second list))
+
+def greaterThan10 x =
+    (> x 10)
+
+def accumulate f list init_val =
+    if (= list nil) then init_val
+    else (f (first list) (accumulate f (second list) init_val))
+
+def plus x y = (+ x y)
