@@ -1,0 +1,7 @@
+Java Multithreading with semaphores
+
+The purpose of this project was to become more familiar with the creation and
+execution of threads, and the use of the Thread’s class methods. In order to 
+synchronize the threads I used (when necessary), run( ), start( ), 
+currentThread( ), getName( ), join( ), yield( ), sleep(time), isAlive( ), getPriority( ), 
+setPriority( ), interrupt( ). A continuation of this project was to use semaphores. 
