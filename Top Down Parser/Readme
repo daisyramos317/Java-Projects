@@ -1,0 +1,21 @@
+This project implements a top-down parser for the following BNF (Backus-Naur Form) for a functional language:
+
+⟨fun def list⟩ → ⟨fun def⟩ | ⟨fun def⟩ ⟨fun def list⟩
+⟨fun def⟩ → "def" ⟨header⟩ = ⟨exp⟩
+⟨header⟩ → ⟨fun name⟩ ⟨parameter list⟩
+⟨fun name⟩ → ⟨id⟩
+⟨parameter list⟩ → ε | ⟨id⟩ ⟨parameter list⟩
+⟨exp⟩ → ⟨id⟩ | ⟨int⟩ | ⟨float⟩ | ⟨floatE⟩ | "nil" | "(" ⟨fun exp⟩ ")" | "if" ⟨exp⟩ "then" ⟨exp⟩ "else" ⟨exp⟩
+⟨fun exp⟩ → ⟨fun op⟩ ⟨exp list⟩
+⟨exp list⟩ → ε | ⟨exp⟩ ⟨exp list⟩
+⟨fun op⟩ → ⟨id⟩ | "pair" | "first" | "second" | ⟨arith op⟩ | ⟨bool op⟩ | ⟨comp op⟩
+⟨arith op⟩ → + | − | * | /
+⟨bool op⟩ → "and" | "or" | "not"
+⟨comp op⟩ → "<" | "<=" | ">" | ">=" | "="
+
+NOTE: ε stands for the empty string. 
+
+The program will read any text file that contains (what is intended to be) a string in the category <fun def list>.
+It will then construct an explicit parse tree and display it in linearly indented form: each syntactic category name 
+labeling a node is displayed on a separate line, prefixed with the integer i representing the node's depth and
+indented by i blanks. This is a basic form of syntax profiler. 
